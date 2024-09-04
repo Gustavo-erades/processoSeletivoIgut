@@ -12,7 +12,7 @@ body{
 }
 .trCabecalho{
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .trCabecalho td{
     font-size: 1rem;
