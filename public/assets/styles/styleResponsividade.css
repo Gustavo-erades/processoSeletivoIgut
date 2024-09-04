@@ -1,0 +1,8 @@
+@media (max-width: 767.98px) { 
+    tbody td{
+        font-size: 0.9rem;
+    }
+    .trCabecalho td{
+        font-size: 0.9rem;
+    }
+}

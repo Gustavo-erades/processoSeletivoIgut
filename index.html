@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="#199BE2">
+    <link rel="shortcut icon" href="./public/assets/images/iconePagina.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/assets/styles/stylePadrao.css">
+    <link rel="stylesheet" href="./public/assets/styles/styleResponsividade.css">
+    <title>Lista de Produtos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <!-- campo de pesquisa -->
+            <h1 class="display-6 mt-4 titulo">Listagem de produtos</h1>
+            <div class="input-group input-group-lg mb-4">
+                <input type="text" class="form-control" onkeyup="filtrarNome()" placeholder="Pesquisar por produto">
+                <button class="input-group-text d-inline" id="lupaPesquisa" onclick="filtrarNome()">
+                    <img width="40" height="40" src="https://img.icons8.com/fluency/96/search.png" alt="search" />
+                </button>
+            </div>
+            <!-- tabela com os registros do banco de dados-->
+            <table class="table table-striped table-hover sombraSuave  mb-4">
+                <thead>
+                    <tr class="trCabecalho">
+                        <td>id</td>
+                        <td>produto</td>
+                        <td>preço</td>
+                        <td>marca</td>
+                        <td>categoria</td>
+                        <td>cadastro</td>
+                    </tr>
+                </thead>
+                <!-- linhas com os registros do banco de dados-->
+                <tbody>
+                </tbody>
+            </table>
+            <!-- paginação dos registros -->
+            <div>
+
+            </div>
+            <!-- footer -->
+            <div class="text-center">
+                <span class="footer">
+                    <a href="https://github.com/Gustavo-erades" target="_blank">
+                        &copy; desenvolvido por Gustavo Êrades
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div id="load">
+            <img width="62" height="62" src="./public/assets/images/icons8-pesquisar-na-lista.gif" />
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./public/assets/scripts/carregaRegistros.js"></script>
+    <script src="./public/assets/scripts/filtrarNome.js"></script>
+    <script src="./public/assets/scripts/listaDados.js"></script>
+    <script src="./public/assets/scripts/loading.js"></script>
+</body>
+
+</html>

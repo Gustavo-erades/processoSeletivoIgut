@@ -1,0 +1,56 @@
+html, body{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fff;
+}
+.sombraSuave{
+    box-shadow: 2px 2px 5px #1b1b1b33;
+}
+.titulo{
+    color:#00263a;
+}
+.trCabecalho{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.trCabecalho td{
+    font-size: 1rem;
+    color:#00263a;
+}
+tbody tr:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 3px #3e3e3e76;
+}
+tbody tr:hover td{
+    background-color: #a0efff;
+}
+.footer a:hover{
+    text-decoration: underline;
+    color: #199BE2;
+    cursor:pointer;
+}
+.footer a{
+    color: #9D9EA0;
+    text-decoration: none;
+}
+#main{
+    display: none;
+}
+#load{
+    display: block;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+#main{
+    display: flex;
+    align-items: center;
+}
+.display-6{
+    text-transform: capitalize;
+}
+#lupaPesquisa{
+    background-color: #fff;
+}
