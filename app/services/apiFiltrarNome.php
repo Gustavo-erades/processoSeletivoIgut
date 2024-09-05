@@ -1,5 +1,6 @@
 <?php
     require_once("../database/conexao.php");
+    require_once("../helpers/formatarValores.php");
     header('Content-Type: application/json');
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
@@ -19,6 +20,8 @@
             $respSelect = mysqli_stmt_get_result($stmt);
             if (mysqli_num_rows($respSelect) > 0) {
                 while ($row = mysqli_fetch_assoc($respSelect)) {
+                    $row['preco']=formataPreco($row['preco']);
+                    $row['dt_cadastro']=formataData($row['dt_cadastro']);
                     $return[] = $row;
                 }
             }

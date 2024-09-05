@@ -2,7 +2,6 @@
     require_once("../database/conexao.php");
     require_once("../helpers/formatarValores.php");
     header('Content-Type: application/json');
-
     $return=array();
     $sql="SELECT * FROM bd_igut.Produtos LIMIT 6;";
     $stmt = mysqli_prepare($conn, $sql);
@@ -16,8 +15,8 @@
         $respSelect = mysqli_stmt_get_result($stmt);
         if (mysqli_num_rows($respSelect) > 0) {
             while ($row = mysqli_fetch_assoc($respSelect)) {
-                $row['dt_cadastro']=formataData($row['dt_cadastro']);
                 $row['preco']=formataPreco($row['preco']);
+                $row['dt_cadastro']=formataData($row['dt_cadastro']);
                 $return[] = $row;
             }
             mysqli_stmt_close($stmt);
