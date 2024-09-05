@@ -1,7 +1,7 @@
 <?php
     $hostname="localhost";
     $username="root";
-    $password="admin1234";
+    $password="";
     $database="bd_igut";
 
     try {
