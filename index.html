@@ -19,7 +19,13 @@
             <!-- campo de pesquisa -->
             <h1 class="display-6 mt-4 titulo">Listagem de produtos</h1>
             <div class="input-group input-group-lg mb-4">
-                <input type="text" class="form-control" onkeyup="filtrarNome()" placeholder="Pesquisar por produto">
+                <input type="text" class="form-control" onkeyup="filtrarNome(this)" placeholder="Pesquisar por produto">
+                <button class="input-group-text d-inline" id="lupaPesquisa" onclick="filtrarNome()">
+                    <img width="40" height="40" src="https://img.icons8.com/fluency/96/search.png" alt="search" />
+                </button>
+            </div>
+            <div class="input-group input-group-md mb-4">
+                <input type="text" class="form-control" onkeyup="filtrarNome(this)" placeholder="Pesquisar por produto">
                 <button class="input-group-text d-inline" id="lupaPesquisa" onclick="filtrarNome()">
                     <img width="40" height="40" src="https://img.icons8.com/fluency/96/search.png" alt="search" />
                 </button>

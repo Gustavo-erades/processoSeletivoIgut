@@ -1,6 +1,8 @@
-async function filtrarNome() {
-    let campoPesquisa = document.querySelector(".form-control").value;
+async function filtrarNome(elemento) {
+    let campoPesquisa = elemento.value;
     const divAlerta = document.querySelector(".divAlerta");
+    const linkVoltar=document.querySelector("#btnAnterior");
+    const linkAvancar=document.querySelector("#btnProx");
     const data = {
         valorDigitado: campoPesquisa
     };
@@ -19,12 +21,17 @@ async function filtrarNome() {
         })
         .then(data => {
             if (data.length > 0) {
+                linkVoltar.style.display='inline';
+                linkAvancar.style.display='inline';
                 divAlerta.classList = "divAlerta d-none";
                 listaDados(data);
 
             } else {
                 const tabela = document.querySelector("tbody");
+            
                 tabela.textContent = '';
+                linkVoltar.style.display='none';
+                linkAvancar.style.display='none';
                 divAlerta.classList = "divAlerta d-block";
             }
             console.log(data)

@@ -5,4 +5,10 @@
     .trCabecalho td{
         font-size: 0.9rem;
     }
+    .input-group-lg{
+        display: none;
+    }
+    .input-group-md{
+        display:inline-flex;
+    }
 }

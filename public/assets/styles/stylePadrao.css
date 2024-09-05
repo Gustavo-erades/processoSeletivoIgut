@@ -38,6 +38,7 @@ tbody tr:hover td{
 }
 .btn-primary{
     background-color: #199BE2;
+    border-color:#199BE2
 }
 .footer a{
     color: #9D9EA0;
@@ -62,4 +63,10 @@ tbody tr:hover td{
 }
 #lupaPesquisa{
     background-color: #fff;
+}
+.input-group-lg{
+    display:inline-flex;
+}
+.input-group-md{
+    display: none;
 }
