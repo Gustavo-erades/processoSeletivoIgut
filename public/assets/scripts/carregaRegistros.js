@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('./app/services/apiCarregaRegistros.php')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Erro na requisição, código de status: ' + response.status);
+                throw new Error('Erro na requisição (carregaRegistros), código de status: ' + response.status);
             }
             return response.json(); 
         })

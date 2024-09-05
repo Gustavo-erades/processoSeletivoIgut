@@ -57,5 +57,7 @@ INSERT INTO Produtos (nome, marca, categoria, preco, dt_cadastro) VALUES
 ('Short de Praia', 'BeachWear', 'roupa', ROUND(RAND() * 40 + 15, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY),
 ('Blusa de Frio', 'CozyWear', 'roupa', ROUND(RAND() * 60 + 20, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY),
 ('Saia Elegante', 'FashionLine', 'roupa', ROUND(RAND() * 50 + 15, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY),
-('Botas de Couro', 'LeatherBoots','roupa', ROUND(RAND() * 50 + 15, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY)
+('Botas de Couro', 'LeatherBoots','roupa', ROUND(RAND() * 50 + 15, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY);
 
+
+SELECT * FROM bd_igut.Produtos WHERE nome LIKE 'Smartphone Y2' LIMIT 4

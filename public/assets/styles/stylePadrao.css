@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    border:0;
+    box-sizing: border-box;
+}
 html, body{
     scroll-behavior: smooth;
 }
@@ -23,12 +28,16 @@ tbody tr:hover{
     box-shadow: 2px 2px 3px #3e3e3e76;
 }
 tbody tr:hover td{
-    background-color: #a0efff;
+    background-color: #65A3FE;
+    color:#fff;
 }
 .footer a:hover{
     text-decoration: underline;
     color: #199BE2;
     cursor:pointer;
+}
+.btn-primary{
+    background-color: #199BE2;
 }
 .footer a{
     color: #9D9EA0;

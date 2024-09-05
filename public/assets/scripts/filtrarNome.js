@@ -1,5 +1,6 @@
 async function filtrarNome() {
     let campoPesquisa = document.querySelector(".form-control").value;
+    const divAlerta = document.querySelector(".divAlerta");
     const data = {
         valorDigitado: campoPesquisa
     };
@@ -17,7 +18,17 @@ async function filtrarNome() {
             return response.json();
         })
         .then(data => {
-            listaDados(data);
+            if (data.length > 0) {
+                divAlerta.classList = "divAlerta d-none";
+                listaDados(data);
+
+            } else {
+                const tabela = document.querySelector("tbody");
+                tabela.textContent = '';
+                divAlerta.classList = "divAlerta d-block";
+            }
+            console.log(data)
+
         })
         .catch(error => {
             console.error('Erro ao fazer a requisição:', error);

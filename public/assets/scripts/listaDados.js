@@ -16,7 +16,7 @@ function listaDados(data){
 
             tdId.textContent=item.id;
             tdProduto.textContent=item.nome;
-            tdPreco.textContent=item.preco;
+            tdPreco.textContent='R$ '+item.preco;
             tdMarca.textContent=item.marca;
             tdCategoria.textContent=item.categoria;
             tdCad.textContent=item.dt_cadastro;
