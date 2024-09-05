@@ -2,6 +2,7 @@
     require_once("../database/conexao.php");
     require_once("../helpers/formatarValores.php");
     header('Content-Type: application/json');
+
     $return=array();
     $sql="SELECT * FROM bd_igut.Produtos LIMIT 6;";
     $stmt = mysqli_prepare($conn, $sql);

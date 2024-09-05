@@ -7,4 +7,4 @@
     function formataPreco($preco){
         $precoFormatado=intval($preco,10);
         return number_format($precoFormatado,2,',','.');
-}
+    }

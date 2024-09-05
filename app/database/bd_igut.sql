@@ -8,6 +8,11 @@ create table Produtos(
     dt_cadastro datetime not null,
     primary key(id)
 );
+
+
+select count(*) from Produtos;
+
+
 alter table Produtos add column preco double not null; 
 select * from Produtos;
 
