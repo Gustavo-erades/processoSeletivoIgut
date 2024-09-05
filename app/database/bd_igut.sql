@@ -6,15 +6,9 @@ create table Produtos(
     marca varchar(50) not null,
     categoria varchar(50) not null,
     dt_cadastro datetime not null,
+    preco double not null,
     primary key(id)
 );
-
-
-select count(*) from Produtos;
-
-
-alter table Produtos add column preco double not null; 
-select * from Produtos;
 
 INSERT INTO Produtos (nome, marca, categoria, preco, dt_cadastro) VALUES 
 ('Laptop X1', 'TechBrand', 'tecnologia', ROUND(RAND() * 2000 + 500, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY),
@@ -65,4 +59,3 @@ INSERT INTO Produtos (nome, marca, categoria, preco, dt_cadastro) VALUES
 ('Botas de Couro', 'LeatherBoots','roupa', ROUND(RAND() * 50 + 15, 2), DATE('2024-09-02') + INTERVAL FLOOR(RAND() * 5) DAY);
 
 
-SELECT * FROM bd_igut.Produtos WHERE nome LIKE 'Smartphone Y2' LIMIT 4
